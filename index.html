@@ -107,7 +107,8 @@
     }
     .birthday {
       display: block; font-family: 'Playfair Display', serif;
-      font-weight: 700; font-size: clamp(3.5rem, 12vw, 8rem); line-height: 0.9;
+      font-weight: 700; font-size: clamp(3.5rem, 12vw, 8rem); line-height: 1.1;
+      padding-bottom: 0.1em;
       background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 40%, var(--rose) 70%, var(--gold-light) 100%);
       background-size: 300%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
       animation: fade-up 1s ease 0.6s forwards, shimmer 4s linear infinite 1.5s;
@@ -316,7 +317,7 @@
 
   <!-- Live "since birth" counter -->
   <div class="age-reveal">
-    <p class="age-label">Celebrating the moments that make you, you</p>
+    <p class="age-label">Celebrating the moments... and the calories 🍔🍟</p>
     <div class="age-display" id="age-display"></div>
   </div>
 
@@ -330,7 +331,7 @@
   <button class="btn-celebrate" id="celebrateBtn">✦ Celebrate ✦</button>
   <p class="click-hint">Click anywhere for fireworks · Hover for magic</p>
 
-  <p class="footer">Made with ♥ just for you</p>
+  <p class="footer">Made with ♥ (and a lot of patience dealing with you) for you</p>
 </div>
 
 <script>
@@ -517,9 +518,9 @@ setTimeout(() => burst(), 2500);
    CLICK ANYWHERE = FIREWORKS
    ========================================================= */
 const wishes = [
-  '🌟 Make a wish!','✨ Another year of magic','🎉 Celebrate you!',
-  '💫 You are wonderful','🎊 Joy & love always','🌸 Keep shining',
-  '🥂 To your best year','💛 You deserve it all','🎈 So glad you exist'
+  '🍔 Diet starts tomorrow!','✨ Another year of magic','🎉 Celebrate you!',
+  '🐘 Stop eating so much cake','🎊 Joy & love always','🌸 Keep shining',
+  '🥂 To your best year','💛 You deserve it all','🎈 Still weird, but I tolerate you'
 ];
 
 document.addEventListener('click', e => {
@@ -596,7 +597,7 @@ setTimeout(spawnWishes, 3000);
       btn.querySelector('.flame').style.opacity='0';
       lit--;
       if(lit===0){
-        hint.textContent = '🎉 All candles blown! Your wish is coming true!';
+        hint.textContent = "🎉 All candles blown! (Don't wish for more food, you've had enough 🐘)";
         burst(null,null,300);
         spawnWishes();
         document.getElementById('cake-emoji').textContent = '✨';
